@@ -71,6 +71,8 @@ func createArray(from start: Int, to end: Int) -> [Int] {
 }
 var array = createArray(from: 1, to: 100)
 print(array)
+// exc 5
 
-
-
+let newArray = array
+let oddArray = newArray.enumerated().filter { $0.0 % 2 == 0 }.map{ $0.1 }
+print(oddArray)
